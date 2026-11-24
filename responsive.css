@@ -1,0 +1,345 @@
+/* ==========================================================================
+   META IT SCHOOL — RESPONSIVE STYLESHEET
+   Handles Desktop, Laptop, Tablet, Android & iPhone mobile screens cleanly
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. LAPTOPS & SCREENS UNDER 1200px
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 1200px) {
+  .hero-headline {
+    font-size: 3.2rem;
+  }
+
+  .courses-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .mentors-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-container {
+    grid-template-columns: 1.2fr 1fr 1fr 1fr;
+    gap: 30px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   2. TABLETS & SMALL LAPTOPS (UNDER 992px)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 992px) {
+  :root {
+    --nav-height: 70px;
+  }
+
+  /* Desktop Nav hidden, Hamburger visible */
+  .nav-menu,
+  .nav-cta-btn {
+    display: none;
+  }
+
+  .hamburger-btn {
+    display: flex;
+  }
+
+  /* Hero adjustments */
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .hero-ticker-wrap {
+    justify-content: center;
+  }
+
+  .hero-actions-group {
+    justify-content: center;
+  }
+
+  .hero-trust-badges {
+    justify-content: center;
+  }
+
+  .floating-chip {
+    display: none; /* Hide floating chips on tablet to prevent clutter */
+  }
+
+  /* Stats Grid: 2 columns */
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 30px 20px;
+  }
+
+  .stat-card:nth-child(2)::after {
+    display: none;
+  }
+
+  /* About Grid */
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-main-img {
+    height: 380px;
+  }
+
+  .about-badge-card {
+    position: static;
+    margin-top: 14px;
+  }
+
+  /* Gallery Grid */
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Location Grid */
+  .location-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .location-map-wrap {
+    min-height: 320px;
+  }
+
+  /* Contact Grid */
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Mentor Callout Banner */
+  .mentor-callout-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 34px 24px;
+  }
+
+  /* Certificate Grid */
+  .cert-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  /* Footer */
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+
+  .footer-bottom-flex {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   3. MOBILE PHONES (UNDER 768px)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 768px) {
+  .section {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .section-title {
+    font-size: 2.1rem;
+  }
+
+  .hero-headline {
+    font-size: 2.7rem;
+  }
+
+  .hero-description {
+    font-size: 1.05rem;
+  }
+
+  .hero-actions-group .btn {
+    width: 100%;
+  }
+
+  /* Features Grid */
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .feature-card {
+    padding: 24px 18px;
+  }
+
+  /* Courses */
+  .courses-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .course-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .course-search-box {
+    width: 100%;
+  }
+
+  /* Mentors */
+  .mentors-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Projects */
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Promo Flash Section */
+  .promo-heading {
+    font-size: 2.1rem;
+  }
+
+  .promo-price-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .promo-card {
+    width: 100%;
+    min-width: auto;
+  }
+
+  /* Modals */
+  .modal-dialog {
+    padding: 24px 18px;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  /* Disable Custom Cursor on Touch Devices */
+  .custom-cursor,
+  .cursor-dot {
+    display: none !important;
+  }
+
+  /* Floating Buttons */
+  .floating-widgets {
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .floating-tg-btn,
+  .back-to-top-btn {
+    width: 46px;
+    height: 46px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   4. SMALL MOBILE SCREENS (UNDER 576px)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 576px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .hero-headline {
+    font-size: 2.25rem;
+    line-height: 1.18;
+  }
+
+  .hero-ticker-wrap {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Stats: 1 column on tiny screens */
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .stat-card::after {
+    display: none !important;
+  }
+
+  /* Features: 1 column */
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Gallery: 1 column */
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Location */
+  .location-details {
+    padding: 24px 18px;
+  }
+
+  .location-actions {
+    flex-direction: column;
+  }
+
+  .location-actions .btn {
+    width: 100%;
+  }
+
+  /* Contact Form */
+  .contact-form-wrap {
+    padding: 24px 18px;
+  }
+
+  /* Testimonials */
+  .testimonial-card {
+    padding: 24px 18px;
+  }
+
+  .testimonial-text {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  /* Footer */
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+
+  .cert-card-preview {
+    padding: 20px 14px;
+    transform: rotate(0deg);
+  }
+
+  .cert-student-name {
+    font-size: 1.15rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   5. TOUCH SCREEN MEDIA QUERY
+   -------------------------------------------------------------------------- */
+@media (pointer: coarse) {
+  .custom-cursor,
+  .cursor-dot {
+    display: none !important;
+  }
+}
